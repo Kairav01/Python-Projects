@@ -7,9 +7,9 @@ def Mysql_connection():
     print("what do you want to continue as: ")
     print("1. Employee")
     print("2. Customer")
-    wao = int(input("Enter your choice: "))
+    a = int(input("Enter your choice: "))
 
-    if wao == 1:
+    if a == 1:
         print("Provide us the following details")
         host = input("Enter your Host Name: ")
         user = input("Enter your User Name: ")
@@ -27,10 +27,10 @@ def Mysql_connection():
             if connection.is_connected:
                 print("You have Succesfully Connected to Mysql")
                 
-        except mysql.connector.Error as s:
-            print('Error: {}',format(s))
+        except mysql.connector.Error as Error:
+            print('Error: {}',format(Error))
 
-    elif wao == 2:
+    elif a == 2:
         print("Provide us the following details")
         user = input("Enter your User Name: ")
         password = input("Enter your Password: ")
@@ -46,8 +46,8 @@ def Mysql_connection():
             if connection.is_connected():
                 print("You have logged into Digital Hub")
 
-        except mysql.connector.Error as s:
-            print('Error: {}',format(s))
+        except mysql.connector.Error as Error:
+            print('Error: {}',format(Error))
 
     else: 
         print("Invalid Entry Please try again") 
